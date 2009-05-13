@@ -7,7 +7,7 @@ class ArchiveOrderExtensionTest < Test::Unit::TestCase
     assert_not_equal 'created_at DESC', Page.reflections[:children].options[:order]
   end
   
-  def test_should_has_included_extension_method
+  def test_should_have_included_extension_method
     assert_equal 'created_at DESC', ArchivePage.reflections[:children].options[:order]
   end
   
