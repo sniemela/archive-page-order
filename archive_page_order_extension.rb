@@ -1,5 +1,9 @@
 # Uncomment this if you reference any of your controllers in activate
-require_dependency 'application'
+if Radiant::Version.to_s >= "0.8.0"
+  require_dependency 'application_controller'
+else
+  require_dependency 'application'
+end
 
 class ArchivePageOrderExtension < Radiant::Extension
   version "1.0"
